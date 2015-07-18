@@ -45,7 +45,12 @@ app.config(function($stateProvider, $urlRouterProvider) {
 				url: '/create',
 				templateUrl: 'partials/sheets.expenses.create.html'
 			})
-});
+})
+.config(['$httpProvider', function($httpProvider) {
+    $httpProvider.defaults.useXDomain = true;
+    delete $httpProvider.defaults.headers.common['X-Requested-With'];
+}
+]);
 appControllers.controller('HomeCtrl', ['$scope', '$http', '$location', '$state', 'SheetsService',
 	function HomeCtrl($scope, $http, $location, $state, SheetsService) {
 
