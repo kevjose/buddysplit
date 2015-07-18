@@ -6,7 +6,8 @@ var appServices = angular.module('appServices', []);
 var appDirectives = angular.module('appDirectives', []);
 var appFilters = angular.module('appFilters', []);
 
-app.constant('Options', {baseUrl: 'http://localhost:3009'});
+//app.constant('Options', {baseUrl: 'http://localhost:3009'});
+app.constant('Options', {baseUrl: 'http://api-buddysplit.herokuapp.com/'});
 
 app.config(function($stateProvider, $urlRouterProvider) {
 	$urlRouterProvider
